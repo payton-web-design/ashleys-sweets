@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashley’s Sweets</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <meta property="og:title" content="Ashley's Sweets">
+  <meta property="og:description" content="Homemade desserts crafted in small batches in Edna & Victoria, Texas.">
+  <meta property="og:image" content="images/socialshare.jpg">
+  <meta property="og:url" content="https://ashleyssweets.com">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ashley's Sweets">
+  <meta name="twitter:description" content="Homemade desserts crafted in small batches in Edna & Victoria, Texas.">
+  <meta name="twitter:image" content="images/socialshare.jpg">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- nav -->
+  <header class="nav" id="siteNav">
+    <div class="nav-inner">
+
+      <nav class="nav-links nav-links--left">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="menu.html">Menu</a>
+      </nav>
+
+      <div class="logo">
+        <a href="#home"><img src="images/logo.png" alt="Ashley's Sweets"></a>
+      </div>
+
+      <nav class="nav-links nav-links--right">
+        <a href="custom-orders.html">Custom Orders</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links-mobile" id="navLinksMobile">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="custom-orders.html">Custom Orders</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- hero -->
+  <section id="home" class="hero">
+
+    <div class="hero-inner">
+
+      <h1>Sweet Dreams Made Real</h1>
+
+      <p>
+        Homemade desserts crafted in small batches in Edna & Victoria, Texas.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="menu.html" class="btn">View Menu</a>
+        <a href="custom-orders.html" class="btn btn-outline">Custom Orders</a>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- featured treats -->
+  <section class="featured">
+
+    <div class="section-inner">
+
+      <h2>Featured Treats</h2>
+
+      <div class="grid">
+        <div class="card">Cheesecakes</div>
+        <div class="card">Chocoflan</div>
+        <div class="card">Custom Cakes</div>
+        <div class="card">Decorative Jello</div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- about section -->
+  <section id="about" class="about">
+
+    <div class="section-inner split">
+
+      <div class="about-text">
+        <h2>About Ashley</h2>
+
+        <p>
+          Ashley creates homemade desserts with love, always experimenting
+          with new flavors and themed treats for holidays and special occasions.
+        </p>
+
+        <p>
+          Every order is made fresh in small batches with care.
+        </p>
+      </div>
+
+      <div class="about-image">
+        <!-- placeholder for later image -->
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- cta - ready to order -->
+  <section class="cta-order">
+
+    <div class="section-inner">
+
+      <h2>Ready to Place Your Order?</h2>
+      <p>
+        Browse the full menu to see all of Ashley's sweets and prices, or reach out
+        directly with any questions about flavors, availability, or custom requests.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="menu.html" class="btn">Browse Menu</a>
+        <a href="contact.html" class="btn btn-outline btn-outline-dark">Contact Us</a>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- footer -->
+  <footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" alt="Ashley's Sweets">
+        </a>
+        <p>Handcrafted desserts made with love and the finest ingredients. Creating sweet memories, one bite at a time.</p>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="custom-orders.html">Custom Orders</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Get in Touch</h4>
+        <ul class="footer-links">
+          <li>(555) 123-4567</li>
+          <li>hello@ashleyssweets.com</li>
+          <li>Edna / Victoria, TX</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Ashley's Sweets. All rights reserved. Made with love and sprinkles.
+    </div>
+  </div>
+</footer>
+
+  <script>
+    const nav = document.getElementById('siteNav');
+    function updateNav() {
+      if (window.scrollY > 60) {
+        nav.classList.add('nav--scrolled');
+      } else {
+        nav.classList.remove('nav--scrolled');
+      }
+    }
+    window.addEventListener('scroll', updateNav);
+    updateNav();
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinksMobile = document.getElementById('navLinksMobile');
+    navToggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('nav-open');
+      navToggle.classList.toggle('is-open', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+    navLinksMobile.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+</body>
+</html>
